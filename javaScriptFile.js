@@ -67,15 +67,6 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }        
         
-        if (movieNameInput !== "" && !isNaN(antallIput) && fornavnInput !== "" && etternavnInput !== "" && !isNaN(telefonnrInput) && epostInput !== "") {
-            errorInput1.innerHTML = ''; 
-            errorInput2.innerHTML = ''; 
-            errorInput3.innerHTML = ''; 
-            errorInput4.innerHTML = ''; 
-            errorInput5.innerHTML = ''; 
-            errorInput6.innerHTML = ''; 
-        }
-
         array.push({
             MovieName: movieNameInput,
             Antall: antallIput,
