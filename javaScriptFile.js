@@ -12,6 +12,70 @@ document.addEventListener("DOMContentLoaded", function() {
         var movieNameInput = document.getElementById('movieName').value;
         var antallIput = parseInt(document.getElementById('antall').value);
 
+        var errorInput1 = document.getElementById('error1');
+        var errorInput2 = document.getElementById('error2');
+        var errorInput3 = document.getElementById('error3');
+        var errorInput4 = document.getElementById('error4');
+        var errorInput5 = document.getElementById('error5');
+        var errorInput6 = document.getElementById('error6');
+
+        let isError = false;
+
+        if (movieNameInput === "") {
+            errorInput1.innerHTML = 'Må velge en film';
+            isError = true;
+        }else{
+            errorInput1.innerHTML = '';
+        }
+        
+        if(isNaN(antallIput)){
+            errorInput2.innerHTML = 'Må skrive noe inn i antall';
+            isError = true;
+        }else{
+            errorInput2.innerHTML = '';
+        }
+        
+        if(fornavnInput === ""){
+            errorInput3.innerHTML = 'Må skrive noe i fornavnet';
+            isError = true;
+        }else{
+            errorInput3.innerHTML = '';
+        }
+        
+        if(etternavnInput === ""){
+            errorInput4.innerHTML = 'Må skrive noe i etternavnet';
+            isError = true;
+        }else{
+            errorInput4.innerHTML = '';
+        }
+        
+        if(isNaN(telefonnrInput)){
+            errorInput5.innerHTML = 'Må skrive noe i telefonr';
+            isError = true;
+        }else{
+            errorInput5.innerHTML = '';
+        }
+        
+        if(epostInput === ""){
+            errorInput6.innerHTML = 'Må skrive noe i epost';
+            isError = true;            
+        }else{
+            errorInput6.innerHTML = '';
+        }
+
+        if (isError) {
+            return;
+        }        
+        
+        if (movieNameInput !== "" && !isNaN(antallIput) && fornavnInput !== "" && etternavnInput !== "" && !isNaN(telefonnrInput) && epostInput !== "") {
+            errorInput1.innerHTML = ''; 
+            errorInput2.innerHTML = ''; 
+            errorInput3.innerHTML = ''; 
+            errorInput4.innerHTML = ''; 
+            errorInput5.innerHTML = ''; 
+            errorInput6.innerHTML = ''; 
+        }
+
         array.push({
             MovieName: movieNameInput,
             Antall: antallIput,
