@@ -19,7 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
         var errorInput5 = document.getElementById('error5');
         var errorInput6 = document.getElementById('error6');
 
+        var specialChars = /[0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+        var containsSpecialChars = !specialChars.test('@') && !specialChars.test('.com');
+        var phonenumber = 99999999
+
         let isError = false;
+
 
         if (movieNameInput === "") {
             errorInput1.innerHTML = 'Må velge en film';
@@ -28,35 +33,35 @@ document.addEventListener("DOMContentLoaded", function() {
             errorInput1.innerHTML = '';
         }
         
-        if(isNaN(antallIput)){
+        if(isNaN(antallIput) || antallIput > 10){
             errorInput2.innerHTML = 'Må skrive noe inn i antall';
             isError = true;
         }else{
             errorInput2.innerHTML = '';
         }
         
-        if(fornavnInput === ""){
+        if(fornavnInput === "" || specialChars.test(fornavnInput)){
             errorInput3.innerHTML = 'Må skrive noe i fornavnet';
             isError = true;
         }else{
             errorInput3.innerHTML = '';
         }
         
-        if(etternavnInput === ""){
+        if(etternavnInput === "" || specialChars.test(etternavnInput)){
             errorInput4.innerHTML = 'Må skrive noe i etternavnet';
             isError = true;
         }else{
             errorInput4.innerHTML = '';
         }
         
-        if(isNaN(telefonnrInput)){
+        if(isNaN(telefonnrInput) || telefonnrInput > phonenumber){
             errorInput5.innerHTML = 'Må skrive noe i telefonr';
             isError = true;
         }else{
             errorInput5.innerHTML = '';
         }
         
-        if(epostInput === ""){
+        if(epostInput === "" || containsSpecialChars){
             errorInput6.innerHTML = 'Må skrive noe i epost';
             isError = true;            
         }else{
