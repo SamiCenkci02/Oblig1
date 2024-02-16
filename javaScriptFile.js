@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var errorInput6 = document.getElementById('error6');
 
         var specialChars = /[0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
-        var containsSpecialChars = !specialChars.test('@') && !specialChars.test('.com');
+        const mail=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         var phonenumber = 99999999
 
         let isError = false;
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
             errorInput5.innerHTML = '';
         }
         
-        if(epostInput === "" || containsSpecialChars){
+        if(epostInput === "" || !mail.test(epostInput)){
             errorInput6.innerHTML = 'Må skrive noe i epost';
             isError = true;            
         }else{
