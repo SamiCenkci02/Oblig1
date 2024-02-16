@@ -92,15 +92,13 @@ document.addEventListener("DOMContentLoaded", function() {
     function printArrayContents(array) {
         var htmltxt = "";
         for (let i = 0; i < array.length; i++) {
-            htmltxt += `
-                <article>
-                    <p>MovieName: ${array[i].MovieName}</p>
-                    <p>AntallBilletter: ${array[i].Antall}</p>
-                    <p>Fornavn: ${array[i].Fornavn}</p>
-                    <p>Etternavn: ${array[i].Etternavn}</p>
-                    <p>Telefonnr: ${array[i].Telefonnr}</p>
-                    <p>Epost: ${array[i].Epost}</p>
-                </article>`;
+            htmltxt += 
+            "<th>"+array[i].MovieName+"</th>"+
+            "<th>"+array[i].Antall+"</th>"+
+            "<th>"+array[i].Fornavn+"</th>"+
+            "<th>"+array[i].Etternavn+"</th>"+
+            "<th>"+array[i].Telefonnr+"</th>"+
+            "<th>"+array[i].Epost+"</th>";       
         }
         outputDiv.innerHTML = htmltxt;
     }
