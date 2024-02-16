@@ -17,27 +17,28 @@
     <label for="movieName">Velg film:</label>
 
     <select name="movieName" id="movieName">
+        <option value="">Pls chose a movie</option>
         <option value="batman">Batman</option>
         <option value="avengers">Avengers</option>
         <option value="spiderman">Spiderman</option>
         <option value="superman">Superman</option>
-    </select>
+    </select><div id="error1" style="color: red;"></div>
 
-    <div>
-        <p>Antall:<input type="number" id="antall" min="0" max="10"></p>
-    </div>
-    <div>
-        <p>Fornavn:<input type="text" id="fornavn" maxlength="20"></p>
-    </div>
-    <div>
-        <p>Etternavn:<input type="text"  id="etternavn" maxlength="20"></p>
-    </div>
-    <div>
-        <p>Telefonnr:<input type="number"  id="telefonnr" min="0"></p>
-    </div>
-    <div>
-        <p>Epost:<input type="text" id="epost" maxlength="20"></p>
-    </div>
+    <p>Antall:<input type="number" id="antall" min="0" max="10"></p>
+    <div id="error2" style="color: red;"></div>
+
+    <p>Fornavn:<input type="text" id="fornavn" maxlength="20"></p>
+    </div><div id="error3" style="color: red;"></div>
+
+    <p>Etternavn:<input type="text"  id="etternavn" maxlength="20"></p>
+    </div><div id="error4" style="color: red;"></div>
+
+    <p>Telefonnr:<input type="number"  id="telefonnr" min="0"></p>
+    </div><div id="error5" style="color: red;"></div>
+
+    <p>Epost:<input type="text" id="epost" maxlength="20"></p>
+    </div><div id="error6" style="color: red;"></div>
+
     <button id="button1">Kjøp billetter</button>
 
     <h1>
